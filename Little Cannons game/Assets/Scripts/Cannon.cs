@@ -6,7 +6,7 @@ public class Cannon : MonoBehaviour
 {
     public float MaxRotatez = 90f;
     Vector3 rotation;
-    float rotationModifier = 1;
+    protected float rotationModifier = 1;
     Vector3 LastFrameRotation;
     public GameObject CannonBall;
     public Transform CannonBallSpawnPoint;
