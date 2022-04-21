@@ -12,6 +12,7 @@ public class Cannon : MonoBehaviour
     public Transform CannonBallSpawnPoint;
     public bool Stunned;
     public float CannonBallSpeed = 1f;
+    public bool canShoot = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,7 +30,7 @@ public class Cannon : MonoBehaviour
         
 
         if(transform.localEulerAngles.z > MaxRotatez ){
-            transform.localEulerAngles = LastFrameRotation;
+           transform.localEulerAngles = LastFrameRotation;
             rotationModifier *= -1;
         }
         
@@ -42,11 +43,18 @@ public class Cannon : MonoBehaviour
     }
 
     public void Shoot(){
-        if(!Stunned && this.gameObject.activeSelf){
+        if(!Stunned && this.gameObject.activeSelf && canShoot){
             GameObject cannonBall = Instantiate(CannonBall, CannonBallSpawnPoint.position, Quaternion.identity);
             cannonBall.GetComponent<Rigidbody2D>().AddForce(CannonBallSpawnPoint.up * CannonBallSpeed);
             cannonBall.GetComponent<CannonBall>().parent = this;
+            canShoot = false;
+            StartCoroutine(WaitToShoot());
         }
+    }
+
+    IEnumerator WaitToShoot(){
+        yield return new WaitForSeconds(1f);
+        canShoot = true;
     }
 
     public void Stun(float time){

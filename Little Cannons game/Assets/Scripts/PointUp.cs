@@ -14,13 +14,21 @@ public class PointUp : MonoBehaviour
         pointText.text = text +": " + point;
     }
 
-    void OnTriggerEnter2D(Collider2D coll){
-        if(coll.gameObject.tag == "Disk"){
+    void OnTriggerEnter2D(Collider2D coll)
+    {
+        if(coll.gameObject.tag == "Disk")
+        {
             point++;
             pointText.text = text +": " + point;
             coll.transform.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             coll.transform.position = new Vector2(0, 0);
         }
 
+    }
+
+    void OnTriggerExit2D(Collider2D coll){
+        if(coll.gameObject.GetComponent<CannonBall>() != null){
+            Destroy(coll.gameObject);
+        }
     }
 }

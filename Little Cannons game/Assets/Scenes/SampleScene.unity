@@ -316,8 +316,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -37, y: -0}
-  m_SizeDelta: {x: 311.7, y: 76.3}
+  m_AnchoredPosition: {x: -37, y: 2.2821}
+  m_SizeDelta: {x: 549.0466, y: 76.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &108913579
 MonoBehaviour:
@@ -664,6 +664,7 @@ MonoBehaviour:
   CannonBallSpawnPoint: {fileID: 706602370}
   Stunned: 0
   CannonBallSpeed: 0.1
+  canShoot: 1
 --- !u!58 &149477245
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2233,6 +2234,7 @@ MonoBehaviour:
   CannonBallSpawnPoint: {fileID: 1296687143}
   Stunned: 0
   CannonBallSpeed: 0.1
+  canShoot: 1
 --- !u!58 &774207430
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -3029,6 +3031,7 @@ MonoBehaviour:
   CannonBallSpawnPoint: {fileID: 831723325}
   Stunned: 0
   CannonBallSpeed: 0.1
+  canShoot: 1
 --- !u!58 &1137169265
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -3409,6 +3412,7 @@ MonoBehaviour:
   CannonBallSpawnPoint: {fileID: 2128051136}
   Stunned: 0
   CannonBallSpeed: 0.1
+  canShoot: 1
 --- !u!58 &1204243185
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -3776,6 +3780,7 @@ MonoBehaviour:
   CannonBallSpawnPoint: {fileID: 448573113}
   Stunned: 0
   CannonBallSpeed: 0.1
+  canShoot: 1
 --- !u!114 &1378418478
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3820,7 +3825,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1381548587}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.95, y: 0.38460964, z: 0.021699905}
+  m_LocalPosition: {x: 1.95, y: -0.67, z: 0.021699905}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 870700083}
@@ -4017,6 +4022,7 @@ MonoBehaviour:
   CannonBallSpawnPoint: {fileID: 819286649}
   Stunned: 0
   CannonBallSpeed: 0.1
+  canShoot: 1
 --- !u!1 &1506696370
 GameObject:
   m_ObjectHideFlags: 0
@@ -5083,10 +5089,10 @@ RectTransform:
   m_Father: {fileID: 1092386570}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
-  m_AnchorMin: {x: 1, y: 0.5}
-  m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -510.2, y: -0}
-  m_SizeDelta: {x: 311.7, y: 76.3}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 50, y: -0.104}
+  m_SizeDelta: {x: 544.4824, y: 76.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2103208075
 MonoBehaviour:
